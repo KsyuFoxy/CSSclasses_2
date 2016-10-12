@@ -1,0 +1,66 @@
+.cat-picture img {
+  position: absolute;
+  width: 200px;
+  height: auto;
+}
+.cat-img {
+  top: 120px;
+  left: 400px;
+  position: absolute;
+}
+.cat-img--first-action {
+   animation: firstPartVisible 4s linear infinite;
+}
+
+@keyframes firstPartVisible {
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  50% {opacity: 0;}
+  75% {opacity: 0;}
+  100% {opacity: 0;}
+
+  0% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  100%   { transform: rotate(0deg) translateX(100px) rotate(0deg) ; }
+}
+.cat-img--second-action {
+   animation: secondPartVisible 4s linear infinite;
+}
+
+@keyframes secondPartVisible {
+  0% {opacity: 0;}
+  25% {opacity: 0;}
+  50% {opacity: 1;}
+  75% {opacity: 0;}
+  100% {opacity: 0;}
+
+  0% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  100%   { transform: rotate(0deg) translateX(100px) rotate(0deg) ; }
+}
+.cat-img--third-action {
+   animation: thirdPartVisible 4s linear infinite;
+}
+
+@keyframes thirdPartVisible {
+  0% {opacity: 0;}
+  25% {opacity: 0;}
+  50% {opacity: 0;}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+
+  0% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  100%   { transform: rotate(0deg) translateX(100px) rotate(0deg) ; }
+}
+.cat-img--fourth-action {
+   animation: fourthPartVisible 4s linear infinite;
+}
+
+@keyframes fourthPartVisible {
+  0% {opacity: 1;}
+  25% {opacity: 0;}
+  50% {opacity: 0;}
+  75% {opacity: 0;}
+  100% {opacity: 1;}
+
+  0% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  100%   { transform: rotate(0deg) translateX(100px) rotate(0deg) ; }
+}
