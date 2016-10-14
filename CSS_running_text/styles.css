@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.video-content {
+  width: 100%;
+  height: 100%;
+ position: absolute;
+ margin: 0 auto;
+}
+.running_text_container {
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+  background-color: blue;
+}
+/*running text*/
+.running_text {
+  position: relative;;
+  overflow: hidden;
+  margin: 20px;
+  z-index: 1;
+  color: white;
+  font-size: 50px;
+   white-space: nowrap;
+   animation: rightToLeftText 15s linear infinite;
+}
+@keyframes rightToLeftText {
+    0%   {margin-left:100%;}
+    100% {margin-left:-170%;}
+}
