@@ -1,0 +1,72 @@
+body {
+    text-align: center;
+    margin-top: 30px;
+}
+.move-areal {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    border: 1px solid grey;
+    padding: 40px;
+}
+.circle {
+    position: absolute;
+    left: 60px;
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+    background: radial-gradient(aqua, dodgerblue);
+}
+.ball {
+    position: absolute;
+    top: 53px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    background: radial-gradient(chartreuse, forestgreen);
+}
+#splashObject {
+    visibility: hidden;
+}
+.splash1 {
+    position: absolute;
+    top: 43px;
+    left: 100px;
+    width: 10px;
+    height: 16px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 8px;
+    transform: rotate(-11deg);
+    background: linear-gradient(chartreuse, aqua);
+}
+.splash2 {
+    position: absolute;
+    top: 59px;
+    left: 103px;
+    width: 15px;
+    height: 10px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 15px;
+    transform: rotate(-23deg);
+    background: linear-gradient(chartreuse, aqua);
+}
+.splash3 {
+    position: absolute;
+    top: 67px;
+    left: 98px;
+    width: 8px;
+    height: 12px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 45px;
+    transform: rotate(20deg);
+    background: linear-gradient(chartreuse, aqua);
+}

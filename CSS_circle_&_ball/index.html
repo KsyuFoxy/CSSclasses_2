@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>Circle with a ball</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <div class="move-areal">
+
+          <div id="circleObject" class="circle"></div>
+          <div id="ballObject" class="ball"></div>
+          <div id="splashObject">
+              <div class="splash1"></div>
+              <div class="splash2"></div>
+              <div class="splash3"></div>
+          </div>
+    </div>
+
+
+</body>
+
+<script>
+    // ball move throw the circle
+//    var ball = document.getElementById('ballObject');
+//    ball.style.left = '0px';
+//    function doMove() {
+//    ball.style.left = parseInt(ball.style.left, 10)  + 2 +'px'; // pseudo-property code: Move right by 2px
+//
+//    }
+//    var interval = setInterval(doMove,20); // call doMove() in 20 msec
+//
+//    function cancelAnimation() {
+//        clearInterval(interval);
+//    }
+//    setTimeout(cancelAnimation, 1500); // time to finish movement
+
+
+// ball move throw the circle
+    var ball = document.getElementById("ballObject");
+        function MoveBallRight() {
+          var pos = 5;
+          var moveBallDuration = setInterval(frame, 5);
+          function frame() {
+            if (pos == 150) {
+              clearInterval(moveBallDuration);
+            } else {
+              pos++;
+              ball.style.left = pos + 'px';
+                BallChangeColor(pos);
+                splashAppeare(pos);
+            }
+          }
+        }
+        setTimeout(MoveBallRight, 2000);
+
+        function BallChangeColor(pos) {
+            if (pos > 65) {
+                ball.style.background = 'radial-gradient(aqua, dodgerblue)';
+            }
+            if (pos > 70 && pos < 128) {
+                ball.style.visibility = 'hidden';
+            } else {
+                ball.style.visibility = 'visible';
+            }
+
+
+        }
+
+// circle move right
+
+    var circle = document.getElementById('circleObject');
+      function MoveCircleRight() {
+          var pos = 60;
+          var moveCircleDuration = setInterval(frame, 5);
+          function frame() {
+            if (pos == 70) {
+              clearInterval(moveCircleDuration);
+            } else {
+              pos++;
+              circle.style.left = pos + 'px';
+            }
+          }
+        }
+    setTimeout(MoveCircleRight, 2300);
+
+// circle move left
+
+        function MoveCircleLeft() {
+              var pos = 70;
+              var moveCircleDuration = setInterval(frame, 15);
+              function frame() {
+                if (pos == 60) {
+                  clearInterval(moveCircleDuration);
+                } else {
+                  pos--;
+                  circle.style.left = pos + 'px';
+                }
+              }
+            }
+
+    setTimeout(MoveCircleLeft, 2500);
+// splash effect
+    var splash = document.getElementById('splashObject');
+    function splashAppeare(pos){
+      if (pos > 118 && pos < 135) {
+          splash.style.visibility = 'visible';
+      } else {
+          splash.style.visibility = 'hidden';
+      }
+    }
+</script>
+
+</html>
